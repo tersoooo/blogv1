@@ -4,6 +4,7 @@ import RegisterModal from './RegisterModal.jsx';
 export default function LoginRegister() {
 
     const [modal, setModal] = useState(false);
+    const closeModal = () => setModal(false);
 
     return (
         <>
@@ -22,7 +23,7 @@ export default function LoginRegister() {
                 </button>
             </div>
             {modal && (
-                <RegisterModal />
+                <RegisterModal closeModal={closeModal} />
             )}
         </>
     )
